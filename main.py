@@ -26,7 +26,7 @@ class patientData(BaseModel):
 def upload_patient_data(data: patientData):
     try:
         response = supabase.table('patients').insert({
-            'id': str(uuid.uuid4),
+            'id': str(uuid.uuid4()),
             'name': data.name,
             'age': data.age,
             'sex': data.sex,
@@ -43,5 +43,6 @@ def upload_patient_data(data: patientData):
         raise HTTPException(status_code=500, detail=str(e))
 
         
+
 
 
