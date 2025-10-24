@@ -31,7 +31,7 @@ def upload_patient_data(data: patientData):
             'blood_group': data.blood_group,
             'height': data.height,
             'weight': data.weight,
-            'know_conditions': data.known_conditions,
+            'known_conditions': data.known_conditions,
             'body_temp': data.body_temp
         }).execute()
         
@@ -41,3 +41,4 @@ def upload_patient_data(data: patientData):
         raise HTTPException(status_code=500, detail=str(e))
 
         
+
